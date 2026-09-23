@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Landing Page</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="overlay"></div>
+
+    <main class="container">
+
+        <img src="images/logo.png" class="logo" alt="Logo">
+
+        <h1>Selamat Datang</h1>
+
+        <p class="subtitle">
+            Platform rasmi kami
+        </p>
+
+        <div class="buttons">
+
+            <a href="https://rezeki44.vip/RFFBRZK44" class="btn">
+                LOGIN
+            </a>
+
+            <a href="https://rezeki44.vip/RFFBRZK44" class="btn">
+                DAFTAR
+            </a>
+
+            <a href="https://rezeki44.vip/RFFBRZK44" class="btn">
+                LINK UTAMA
+            </a>
+
+        </div>
+
+        <footer>
+            © 2026 - REZEKI44
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+
+    font-family: Arial, sans-serif;
+
+    background-image: url("images/background.jpg");
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+}
+
+.overlay {
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.55);
+}
+
+.container {
+    position: relative;
+    z-index: 2;
+
+    width: 90%;
+    max-width: 500px;
+
+    text-align: center;
+
+    padding: 40px 25px;
+}
+
+.logo {
+    width: 180px;
+    max-width: 70%;
+
+    margin-bottom: 25px;
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.btn {
+    display: block;
+
+    padding: 16px 20px;
+
+    background: white;
+    color: #111;
+
+    text-decoration: none;
+
+    border-radius: 10px;
+
+    font-size: 17px;
+    font-weight: bold;
+
+    transition: 0.2s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+footer {
+    margin-top: 35px;
+
+    font-size: 13px;
+
+    opacity: 0.8;
+}
+
+@media (max-width: 600px) {
+
+    h1 {
+        font-size: 26px;
+    }
+
+    .container {
+        padding: 30px 20px;
+    }
+
+    .btn {
+        padding: 14px;
+    }
+}
+document.addEventListener("DOMContentLoaded", function () {
+
+    const buttons = document.querySelectorAll(".btn");
+
+    buttons.forEach(function (button) {
+
+        button.addEventListener("click", function () {
+            console.log("Button clicked:", button.textContent.trim());
+        });
+
+    });
+
+});
